@@ -28,7 +28,12 @@ spring:
     default-schema: public
     contexts: migrated
 
+
 logging:
   level:
     root: debug
+
+
+jwt:
+  expiration: 86400000
 

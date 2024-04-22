@@ -10,4 +10,19 @@
             <dropTable tableName="car"/>
         </rollback>
     </changeSet>
+    <changeSet id="2" author="admin">
+        <sqlFile path="db/changelog/1.0/insert-car-table.sql"/>
+    </changeSet>
+    <changeSet id="3" author="admin">
+        <sqlFile path="db/changelog/1.0/create-owner-table.sql"/>
+            <rollback>
+                <dropTable tableName="owner"/>
+            </rollback>
+    </changeSet>
+    <changeSet id="4" author="admin">
+        <sqlFile path="db/changelog/1.0/create-car-owner-table.sql"/>
+    </changeSet>
+    <changeSet id="5" author="admin">
+        <sqlFile path="db/changelog/1.0/insert-owner-table.sql"/>
+    </changeSet>
 </databaseChangeLog>

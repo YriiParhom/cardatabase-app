@@ -4,5 +4,9 @@
                    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
                    https://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-latest.xsd">
 
+    <include file="db/changelog/1.0/create-owner-table.sql"/>
     <include file="db/changelog/1.0/create-car-table.sql"/>
+    <include file="db/changelog/1.0/create-car-owner-table.sql"/>
+    <include file="db/changelog/1.0/insert-car-table.sql"/>
+    <include file="db/changelog/1.0/insert-owner-table.sql"/>
 </databaseChangeLog>

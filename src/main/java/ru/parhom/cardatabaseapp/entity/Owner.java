@@ -7,20 +7,16 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 @Entity
-@Table(name = "car")
 @NoArgsConstructor
 @AllArgsConstructor
 @Data
 @Builder
-public class Car {
+@Table(name = "owner")
+public class Owner {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
-    private String brand;
-    private String model;
-    private String color;
-    private String registrationNumber;
-    private Integer modelYear;
-    private Integer price;
+    private String firstName;
+    private String lastName;
 }

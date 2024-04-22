@@ -4,5 +4,10 @@
                    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
                    https://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-latest.xsd">
 
-    <include file="db/changelog/1.0/master.xml"/>
+    <changeSet id="1" author="admin">
+        <sqlFile path="db/changelog/1.0/create-car-table.sql"/>
+        <rollback>
+            <dropTable tableName="car"/>
+        </rollback>
+    </changeSet>
 </databaseChangeLog>
